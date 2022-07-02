@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=28 format=2]
+
+[ext_resource path="res://Letter Tiles/Box/letter_R.png" type="Texture" id=1]
+[ext_resource path="res://Letter Tiles/Box/letter_S.png" type="Texture" id=2]
+[ext_resource path="res://Letter Tiles/Box/letter_U.png" type="Texture" id=3]
+[ext_resource path="res://Letter Tiles/Box/letter_W.png" type="Texture" id=4]
+[ext_resource path="res://Letter Tiles/Box/letter_V.png" type="Texture" id=5]
+[ext_resource path="res://Letter Tiles/Box/letter_T.png" type="Texture" id=6]
+[ext_resource path="res://Letter Tiles/Box/letter_X.png" type="Texture" id=7]
+[ext_resource path="res://Letter Tiles/Box/letter_Z.png" type="Texture" id=8]
+[ext_resource path="res://Letter Tiles/Box/letter_Y.png" type="Texture" id=9]
+[ext_resource path="res://Letter Tiles/Box/letter.png" type="Texture" id=10]
+[ext_resource path="res://Letter Tiles/Box/letter_E.png" type="Texture" id=11]
+[ext_resource path="res://Letter Tiles/Box/letter_D.png" type="Texture" id=12]
+[ext_resource path="res://Letter Tiles/Box/letter_F.png" type="Texture" id=13]
+[ext_resource path="res://Letter Tiles/Box/letter_B.png" type="Texture" id=14]
+[ext_resource path="res://Letter Tiles/Box/letter_A.png" type="Texture" id=15]
+[ext_resource path="res://Letter Tiles/Box/letter_C.png" type="Texture" id=16]
+[ext_resource path="res://Letter Tiles/Box/letter_G.png" type="Texture" id=17]
+[ext_resource path="res://Letter Tiles/Box/letter_H.png" type="Texture" id=18]
+[ext_resource path="res://Letter Tiles/Box/letter_I.png" type="Texture" id=19]
+[ext_resource path="res://Letter Tiles/Box/letter_J.png" type="Texture" id=20]
+[ext_resource path="res://Letter Tiles/Box/letter_K.png" type="Texture" id=21]
+[ext_resource path="res://Letter Tiles/Box/letter_P.png" type="Texture" id=22]
+[ext_resource path="res://Letter Tiles/Box/letter_Q.png" type="Texture" id=23]
+[ext_resource path="res://Letter Tiles/Box/letter_N.png" type="Texture" id=24]
+[ext_resource path="res://Letter Tiles/Box/letter_L.png" type="Texture" id=25]
+[ext_resource path="res://Letter Tiles/Box/letter_O.png" type="Texture" id=26]
+[ext_resource path="res://Letter Tiles/Box/letter_M.png" type="Texture" id=27]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "default",
+"speed": 1.0
+} ]

@@ -1,0 +1,381 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://panelstyle.tres" type="StyleBox" id=1]
+[ext_resource path="res://NEUROPOL.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://titlefont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Icons/arrowLeft.png" type="Texture" id=5]
+[ext_resource path="res://BrownTilesSpriteFrames.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://Icons/return.png" type="Texture" id=7]
+[ext_resource path="res://Icons/cross.png" type="Texture" id=8]
+[ext_resource path="res://Icons/checkmark.png" type="Texture" id=9]
+[ext_resource path="res://Icons/gear.png" type="Texture" id=10]
+[ext_resource path="res://Icons/information.png" type="Texture" id=11]
+[ext_resource path="res://Icons/contrast.png" type="Texture" id=12]
+[ext_resource path="res://Icons/musicOn.png" type="Texture" id=13]
+[ext_resource path="res://Icons/musicOff.png" type="Texture" id=14]
+[ext_resource path="res://Icons/target.png" type="Texture" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.788235, 0.792157, 0.301961, 0.027451 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.27451, 0.670588, 0.568627, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.788235, 0.792157, 0.301961, 0.027451 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.619608, 0.670588, 0.27451, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 65
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+outline_size = 1
+outline_color = Color( 0.309804, 0.286275, 0.286275, 0.278431 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+outline_size = 1
+outline_color = Color( 0.309804, 0.286275, 0.286275, 0.278431 )
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top Panel" type="Panel" parent="Start Panel"]
+anchor_right = 1.0
+margin_bottom = 51.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Start Panel/Top Panel"]
+margin_top = 2.0
+margin_right = 608.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.239216, 0.294118, 0.301961, 1 )
+text = "That Spelling Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Start Panel/Top Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -25.5
+margin_bottom = 25.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings Button" type="TextureButton" parent="Start Panel/Top Panel/HSplitContainer"]
+margin_right = 50.0
+margin_bottom = 51.0
+button_mask = 7
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Information Button2" type="TextureButton" parent="Start Panel/Top Panel/HSplitContainer"]
+margin_left = 62.0
+margin_right = 112.0
+margin_bottom = 51.0
+button_mask = 7
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button" type="Button" parent="Start Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -226.5
+margin_top = -95.0
+margin_right = 226.5
+margin_bottom = 95.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Board" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top Panel" type="Panel" parent="Game Board"]
+anchor_right = 1.0
+margin_bottom = 51.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Game Board/Top Panel"]
+margin_top = 2.0
+margin_right = 608.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.239216, 0.294118, 0.301961, 1 )
+text = "That Spelling Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Game Board/Top Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -25.5
+margin_bottom = 25.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings Button" type="TextureButton" parent="Game Board/Top Panel/HSplitContainer"]
+margin_right = 50.0
+margin_bottom = 51.0
+button_mask = 7
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Information Button2" type="TextureButton" parent="Game Board/Top Panel/HSplitContainer"]
+margin_left = 62.0
+margin_right = 112.0
+margin_bottom = 51.0
+button_mask = 7
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Game Board"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( 0, -200 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="2" type="AnimatedSprite" parent="Game Board/Control"]
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="5" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( -200, -100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="3" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( 0, 200 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="4" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( 200, -100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="6" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( -200, 100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="7" type="AnimatedSprite" parent="Game Board/Control"]
+position = Vector2( 200, 100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+
+[node name="Answer" type="LineEdit" parent="Game Board"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -494.0
+margin_bottom = -434.0
+custom_fonts/font = SubResource( 4 )
+text = "Appropriatable"
+align = 1
+max_length = 30
+editable = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+right_icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button Panel" type="Panel" parent="Game Board"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -209.392
+margin_bottom = -158.392
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game Board/Button Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="Game Board/Button Panel/HBoxContainer"]
+margin_left = 308.0
+margin_right = 358.0
+margin_bottom = 51.0
+shortcut_in_tooltip = false
+button_mask = 7
+texture_normal = ExtResource( 8 )
+
+[node name="Submit" type="TextureButton" parent="Game Board/Button Panel/HBoxContainer"]
+margin_left = 362.0
+margin_right = 412.0
+margin_bottom = 51.0
+texture_normal = ExtResource( 9 )
+
+[node name="Settings" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+dragger_visibility = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Settings/VSplitContainer"]
+margin_right = 720.0
+margin_bottom = 50.0
+dragger_visibility = 1
+
+[node name="Back Button" type="TextureButton" parent="Settings/VSplitContainer/HSplitContainer"]
+margin_right = 50.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Settings/VSplitContainer/HSplitContainer"]
+margin_left = 62.0
+margin_top = 1.0
+margin_right = 720.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.239216, 0.294118, 0.301961, 1 )
+text = "Settings"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/VSplitContainer"]
+margin_top = 62.0
+margin_right = 720.0
+margin_bottom = 1280.0
+
+[node name="ThemeButton" type="CheckButton" parent="Settings/VSplitContainer/VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 58.0
+custom_icons/off = ExtResource( 15 )
+custom_icons/on = ExtResource( 12 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color_hover = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color_pressed = Color( 0.239216, 0.294118, 0.301961, 1 )
+shortcut_in_tooltip = false
+button_mask = 7
+text = "Dark Mode"
+align = 1
+
+[node name="SoundButton" type="CheckButton" parent="Settings/VSplitContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 720.0
+margin_bottom = 120.0
+custom_icons/off = ExtResource( 14 )
+custom_icons/on = ExtResource( 13 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color_hover = Color( 0.239216, 0.294118, 0.301961, 1 )
+custom_colors/font_color_pressed = Color( 0.239216, 0.294118, 0.301961, 1 )
+shortcut_in_tooltip = false
+pressed = true
+button_mask = 7
+text = "Sound"
+align = 1
